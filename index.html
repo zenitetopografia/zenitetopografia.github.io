@@ -110,36 +110,33 @@ section{scroll-margin-top:72px}
 .kicker{font:700 15px Montserrat,sans-serif;color:var(--green);margin-bottom:10px}
 
 /* services scrollytelling */
-.svc{padding:96px 0 40px}
+.svc{padding:84px 0 32px}
 .svc-head{max-width:62ch;margin-bottom:28px}
 .svc-head p{margin-top:12px;font-size:19px}
-.svc-block{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:40px}
-.svc-media{position:sticky;top:96px;height:calc(100vh - 140px);max-height:640px;border-radius:14px;overflow:hidden;background:var(--navy)}
+.svc-block{display:grid;grid-template-columns:1.2fr 1fr;gap:44px;margin-top:28px;align-items:start}
+.svc-media{position:sticky;top:calc(50vh - min(19vw,250px));aspect-ratio:3/2;border-radius:14px;overflow:hidden;background:var(--navy)}
 .svc-media figure{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .6s ease, transform 1.2s ease;transform:scale(1.04)}
 .svc-media figure.on{opacity:1;transform:scale(1)}
-.svc-media img,.svc-media svg{width:100%;height:100%;object-fit:cover}
+.svc-media img,.svc-media svg{width:100%;height:100%;object-fit:contain}
 .svc-media figcaption{position:absolute;left:14px;bottom:14px;background:rgba(18,29,41,.82);color:#fff;font:600 13px Montserrat,sans-serif;padding:6px 10px;border-radius:6px}
 .svc-group-title{display:flex;align-items:center;gap:14px;margin:6px 0 8px}
 .svc-group-title h3{font-size:26px}
 .svc-group-title .ico{width:44px;height:44px;border-radius:10px;background:var(--navy);display:grid;place-items:center;flex:none}
 .svc-group-title .ico svg{width:24px;height:24px;stroke:var(--stake);fill:none;stroke-width:1.8}
-.svc-list article{padding:30px 0 30px 20px;border-bottom:1px solid var(--line);border-left:3px solid transparent;transition:border-color .35s}
+.svc-list article{padding:20px 0 20px 18px;border-bottom:1px solid var(--line);border-left:3px solid transparent;transition:border-color .35s}
 .svc-list article.on{border-left-color:var(--stake)}
-.svc-list article h4{font:700 22px/1.25 Montserrat,sans-serif;color:var(--ink);margin:0 0 10px}
+.svc-list article h4{font:700 21px/1.25 Montserrat,sans-serif;color:var(--ink);margin:0 0 6px}
+.svc-list article p{font-size:17px;line-height:1.55}
 .svc-list article p+p{margin-top:10px}
-.svc-list .use{background:var(--paper);border-radius:8px;padding:12px 14px;margin-top:14px;font-size:17px}
+.svc-list .use{background:var(--paper);border-radius:8px;padding:10px 14px;margin-top:10px;font-size:16.5px;line-height:1.5}
 .svc-list .use b{color:var(--ink)}
 .svc-list .ask{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font:700 15px Montserrat,sans-serif;color:var(--navy);text-decoration:none;border-bottom:2px solid var(--stake);padding-bottom:2px}
-.svc-list .mimg{display:none;border-radius:10px;margin-bottom:16px;aspect-ratio:16/10;object-fit:cover;width:100%}
+.svc-list .mimg{display:none;border-radius:10px;margin-bottom:14px;width:100%;height:auto}
 @media (max-width:900px){.svc-block{grid-template-columns:1fr;gap:0}.svc-media{display:none}.svc-list article{padding-left:0;border-left:0}.svc-list .mimg{display:block}}
 
 .svc-agro{background:var(--paper);padding-bottom:96px}
 .svc-agro .svc-list article{border-bottom-color:#E3E7EA}
 .svc-agro .svc-list .use{background:#fff}
-.ph{width:100%;height:100%;display:grid;place-content:center;justify-items:center;gap:12px;color:#9FB0C0;font:600 15px Montserrat,sans-serif;background:radial-gradient(circle at 50% 40%,#2E4660,#1B2A3B)}
-.ph svg{width:56px;height:56px;fill:none;stroke:var(--stake);stroke-width:1.5}
-.svc-list .ph-m{display:none}
-@media (max-width:900px){.svc-list .ph-m{display:grid;aspect-ratio:16/10;border-radius:10px;margin-bottom:16px}}
 
 /* aerial band: marquee */
 .aerial{background:var(--navy);color:#fff;padding:90px 0 70px;overflow:hidden}
@@ -147,17 +144,15 @@ section{scroll-margin-top:72px}
 .aerial .intro{max-width:60ch;color:#D6E0E9;margin-top:12px;font-size:19px}
 .marquee{margin-top:40px;display:flex;gap:14px;width:max-content;animation:slide 60s linear infinite}
 .marquee:hover{animation-play-state:paused}
-.marquee img{height:240px;width:auto;aspect-ratio:3/2;object-fit:cover;border-radius:10px}
+.marquee img{height:240px;width:auto;border-radius:10px}
 @keyframes slide{to{transform:translateX(-50%)}}
 
 /* compare */
 .compare{padding:96px 0;background:var(--paper)}
 .compare .cols{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}
-.cmp{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;background:#222;user-select:none;touch-action:pan-y}
+.cmp{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:1312/1031;background:#222;user-select:none;touch-action:pan-y}
 .cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .cmp .plan{position:absolute;inset:0;clip-path:inset(0 0 0 var(--cut,50%))}
-.cmp .plan .tint{position:absolute;inset:0;background:rgba(246,247,245,.5)}
-.cmp .plan svg{position:absolute;inset:0;width:100%;height:100%}
 .cmp .bar{position:absolute;top:0;bottom:0;left:var(--cut,50%);width:3px;background:var(--stake);transform:translateX(-1.5px)}
 .cmp .knob{position:absolute;top:50%;left:var(--cut,50%);width:46px;height:46px;border-radius:50%;background:var(--stake);transform:translate(-50%,-50%);display:grid;place-items:center;box-shadow:0 6px 16px rgba(0,0,0,.35)}
 .cmp input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
@@ -191,7 +186,7 @@ section{scroll-margin-top:72px}
 
 /* final cta */
 .final{position:relative;color:#fff;padding:110px 0;background:var(--navy);overflow:hidden}
-.final .bg{position:absolute;inset:0;background:url(https://images.unsplash.com/photo-1697585075154-78f0bab6c611?w=1800&q=65&auto=format) center/cover;opacity:.28}
+.final .bg{position:absolute;inset:0;background:url(cmp-ortofoto.jpg) center/cover;opacity:.28}
 .final .wrap{position:relative}
 .final h2{color:#fff;max-width:18ch}
 .final p{margin-top:14px;max-width:52ch;color:#DCE5ED;font-size:19px}
@@ -247,8 +242,6 @@ footer a{color:#fff}
       </div>
       <div class="trust rv">
         <span><span class="stars" aria-hidden="true">★★★★★</span><a href="https://share.google/0IzYWe1VFSObKGkhg" target="_blank" rel="noopener">5,0 no Google</a></span>
-        <span>Responsável técnico com registro no CREA</span>
-        <span>GPS RTK e drone próprios</span>
       </div>
     </div>
 
@@ -258,8 +251,8 @@ footer a{color:#fff}
 <section class="svc" id="servicos" aria-labelledby="s-t">
   <div class="wrap">
     <div class="svc-head">
-      <p class="kicker rv">Serviços</p>
-      <h2 id="s-t" class="rv">Do levantamento em campo ao documento no cartório</h2>
+      <p class="kicker rv">O que fazemos</p>
+      <h2 id="s-t" class="rv">Serviços</h2>
       <p class="rv">Topografia com GPS RTK de precisão centimétrica para imóveis urbanos e rurais, obras e projetos de engenharia.</p>
     </div>
     <div class="svc-block">
@@ -317,16 +310,16 @@ footer a{color:#fff}
 <section class="svc svc-agro" id="agro" aria-labelledby="ag-t">
   <div class="wrap">
     <div class="svc-head">
-      <p class="kicker rv">Serviços para o agro</p>
-      <h2 id="ag-t" class="rv">Dados do campo para produzir mais</h2>
+      <p class="kicker rv">Agro</p>
+      <h2 id="ag-t" class="rv">Serviços para o AGRO</h2>
       <p class="rv">Imagens de drone e análise para você enxergar cada planta da sua área e decidir o manejo com base em números.</p>
     </div>
     <div class="svc-block">
       <div class="svc-media" aria-hidden="true">
         <figure data-k="falha" class="on"><img loading="lazy" src="agro-falhas.jpg" alt=""><figcaption>Falhas de plantio em bananal</figcaption></figure>
-        <figure data-k="cont"><img loading="lazy" src="agro-contagem.jpg" alt=""><figcaption>Contagem de plantas (ilustração)</figcaption></figure>
-        <figure data-k="prod"><img loading="lazy" src="agro-produtividade.jpg" alt=""><figcaption>Mapa de produtividade (ilustração)</figcaption></figure>
-        <figure data-k="efic"><div class="ph"><svg viewBox="0 0 24 24"><path d="M12 22V12M12 12c0-4 3-7 7-7 0 4-3 7-7 7ZM12 15c0-3-2.5-5.5-6-5.5 0 3.5 2.5 5.5 6 5.5Z"/></svg><span>Foto em breve</span></div><figcaption>Acompanhamento de manejo</figcaption></figure>
+        <figure data-k="cont"><img loading="lazy" src="agro-contagem.jpg" alt=""><figcaption>Contagem de plantas</figcaption></figure>
+        <figure data-k="prod"><img loading="lazy" src="agro-produtividade.jpg" alt=""><figcaption>Mapa de produtividade</figcaption></figure>
+        <figure data-k="efic"><img loading="lazy" src="agro-manejo.jpg" alt=""><figcaption>Acompanhamento de manejo em uva</figcaption></figure>
       </div>
       <div class="svc-list">
         <div class="svc-group-title rv"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 22V11M12 11c0-4 3-7 7-7 0 4-3 7-7 7ZM12 15c0-3-2.5-5.5-6-5.5 0 3.5 2.5 5.5 6 5.5Z"/></svg></span><h3>Agricultura de precisão</h3></div>
@@ -337,19 +330,19 @@ footer a{color:#fff}
           <p class="use"><b>Para que serve:</b> aumentar a área plantada e, consequentemente, o retorno econômico, replantando exatamente onde há falhas.</p>
         </article>
         <article data-k="cont">
-          <img class="mimg" loading="lazy" src="agro-contagem.jpg" alt="Ortofoto com pontos marcando cada planta contada">
+          <img class="mimg" loading="lazy" src="agro-contagem.jpg" alt="Ortofoto de pomar com cada planta marcada e numerada">
           <h4>Contagem de plantas</h4>
           <p>Contabilizamos a quantidade de plantas dentro do perímetro agricultável, a partir de ortofotos em alta resolução.</p>
           <p class="use"><b>Para que serve:</b> conhecer o estande real da área, planejar insumos, mão de obra e colheita, e acompanhar a evolução do plantio.</p>
         </article>
         <article data-k="prod">
-          <img class="mimg" loading="lazy" src="agro-produtividade.jpg" alt="Mapa de produtividade em cores, do vermelho ao verde, sobre ortofoto">
+          <img class="mimg" loading="lazy" src="agro-produtividade.jpg" alt="Mapa de produtividade em kg/ha, do vermelho ao verde">
           <h4>Mapas de produtividade</h4>
           <p>Mapeamos a produção da área e mostramos onde ela é maior e onde é menor.</p>
           <p class="use"><b>Para que serve:</b> identificar as regiões que produzem mais e replicar o manejo nas demais, e investigar o que pode melhorar nas que produzem menos.</p>
         </article>
         <article data-k="efic">
-          <div class="ph ph-m"><svg viewBox="0 0 24 24"><path d="M12 22V12M12 12c0-4 3-7 7-7 0 4-3 7-7 7ZM12 15c0-3-2.5-5.5-6-5.5 0 3.5 2.5 5.5 6 5.5Z"/></svg><span>Foto em breve</span></div>
+          <img class="mimg" loading="lazy" src="agro-manejo.jpg" alt="Técnica avaliando cachos de uva em latada">
           <h4>Avaliação de eficiência de manejo</h4>
           <p>Conduzimos o acompanhamento de pesquisa e desenvolvimento de produtos, variedades, manejos e outras práticas no campo.</p>
           <p class="use"><b>Para que serve:</b> comparar tratamentos com dados reais e decidir com segurança o que vale a pena adotar na propriedade.</p>
@@ -366,20 +359,24 @@ footer a{color:#fff}
     <p class="intro rv">Em loteamentos, obras e propriedades rurais, o mapeamento com drone registra a área inteira em alta resolução, com medidas reais e imagens atualizadas para planejar, acompanhar e decidir.</p>
   </div>
   <div class="marquee" aria-hidden="true">
-    <img loading="lazy" alt="" src="https://images.unsplash.com/photo-1773491278268-24170bb1c9df?w=600&q=60&auto=format">
-    <img loading="lazy" alt="" src="https://images.unsplash.com/photo-1723107638858-331404b1a09a?w=600&q=60&auto=format">
-    <img loading="lazy" alt="" src="https://images.unsplash.com/photo-1688883363361-4f92a92e4c59?w=600&q=60&auto=format">
-    <img loading="lazy" alt="" src="https://images.unsplash.com/photo-1677980075014-3d192f203c16?w=600&q=60&auto=format">
-    <img loading="lazy" alt="" src="https://images.unsplash.com/photo-1723367194881-fe2e53534170?w=600&q=60&auto=format">
-    <img loading="lazy" alt="" src="https://images.unsplash.com/photo-1584289488698-6f7b099c9ae0?w=600&q=60&auto=format">
-    <img loading="lazy" alt="" src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=600&q=60&auto=format">
-    <img loading="lazy" alt="" src="https://images.unsplash.com/photo-1773491278268-24170bb1c9df?w=600&q=60&auto=format">
-    <img loading="lazy" alt="" src="https://images.unsplash.com/photo-1723107638858-331404b1a09a?w=600&q=60&auto=format">
-    <img loading="lazy" alt="" src="https://images.unsplash.com/photo-1688883363361-4f92a92e4c59?w=600&q=60&auto=format">
-    <img loading="lazy" alt="" src="https://images.unsplash.com/photo-1677980075014-3d192f203c16?w=600&q=60&auto=format">
-    <img loading="lazy" alt="" src="https://images.unsplash.com/photo-1723367194881-fe2e53534170?w=600&q=60&auto=format">
-    <img loading="lazy" alt="" src="https://images.unsplash.com/photo-1584289488698-6f7b099c9ae0?w=600&q=60&auto=format">
-    <img loading="lazy" alt="" src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=600&q=60&auto=format">
+    <img loading="lazy" alt="" src="car-01.jpg">
+    <img loading="lazy" alt="" src="car-02.jpg">
+    <img loading="lazy" alt="" src="car-03.jpg">
+    <img loading="lazy" alt="" src="car-04.jpg">
+    <img loading="lazy" alt="" src="car-05.jpg">
+    <img loading="lazy" alt="" src="car-06.jpg">
+    <img loading="lazy" alt="" src="car-07.jpg">
+    <img loading="lazy" alt="" src="car-08.jpg">
+    <img loading="lazy" alt="" src="car-09.jpg">
+    <img loading="lazy" alt="" src="car-01.jpg">
+    <img loading="lazy" alt="" src="car-02.jpg">
+    <img loading="lazy" alt="" src="car-03.jpg">
+    <img loading="lazy" alt="" src="car-04.jpg">
+    <img loading="lazy" alt="" src="car-05.jpg">
+    <img loading="lazy" alt="" src="car-06.jpg">
+    <img loading="lazy" alt="" src="car-07.jpg">
+    <img loading="lazy" alt="" src="car-08.jpg">
+    <img loading="lazy" alt="" src="car-09.jpg">
   </div>
 </section>
 
@@ -393,27 +390,13 @@ footer a{color:#fff}
     </div>
     <div class="rv">
       <div class="cmp" id="cmp">
-        <img src="https://images.unsplash.com/photo-1697585075154-78f0bab6c611?w=1200&q=70&auto=format" alt="Vista aérea vertical de um bairro">
-        <div class="plan">
-          <div class="tint"></div>
-          <svg viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true">
-            <g fill="rgba(242,194,48,.14)" stroke="#1B2A3B" stroke-width="2">
-              <path d="M0 150 C80 140 160 165 240 150 S360 140 400 146" stroke-width="10" stroke="#C9D1D8"/>
-              <rect x="22" y="30" width="70" height="88"/><rect x="100" y="24" width="64" height="94"/><rect x="172" y="34" width="80" height="80"/><rect x="262" y="26" width="58" height="92"/><rect x="328" y="30" width="60" height="86"/>
-              <rect x="18" y="182" width="84" height="92"/><rect x="110" y="178" width="70" height="100"/><rect x="190" y="186" width="66" height="86"/><rect x="266" y="180" width="62" height="96"/><rect x="336" y="184" width="54" height="90"/>
-            </g>
-            <g fill="#F2C230" stroke="#1B2A3B" stroke-width="1">
-              <circle cx="22" cy="30" r="3"/><circle cx="92" cy="30" r="3"/><circle cx="92" cy="118" r="3"/><circle cx="22" cy="118" r="3"/>
-              <circle cx="190" cy="186" r="3"/><circle cx="256" cy="186" r="3"/><circle cx="256" cy="272" r="3"/><circle cx="190" cy="272" r="3"/>
-            </g>
-          </svg>
-        </div>
+        <img src="cmp-ortofoto.jpg" alt="Ortofoto de um loteamento" width="1312" height="1031">
+        <div class="plan"><img src="cmp-projeto.jpg" alt="Projeto do loteamento com lotes, áreas e ruas" width="1312" height="1031"></div>
         <div class="bar"></div><div class="knob" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3A2C00" stroke-width="2.5"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></div>
         <span class="lbl l">Ortofoto</span><span class="lbl r">Projeto</span>
         <input type="range" min="0" max="100" value="50" aria-label="Comparar ortofoto e projeto">
       </div>
-      <p class="cmp-note">Imagem ilustrativa.</p>
-    </div>
+          </div>
   </div>
 </section>
 
@@ -447,7 +430,7 @@ footer a{color:#fff}
       <details class="rv"><summary>Preciso de ART?</summary><p>Na maioria dos casos, sim: cartórios, prefeituras e bancos pedem a ART junto com a planta e o memorial. Nós emitimos a ART no CREA.</p></details>
       <details class="rv"><summary>A medida do meu terreno não bate com a escritura. E agora?</summary><p>É mais comum do que parece. Fazemos o levantamento real e indicamos o caminho, que pode ser uma retificação de área no cartório.</p></details>
       <details class="rv"><summary>Vocês atendem fora de Petrolina?</summary><p>Sim. Atendemos Petrolina, Juazeiro e cidades do Vale do São Francisco, em áreas urbanas e rurais.</p></details>
-      <details class="rv"><summary>Vocês fazem imóvel rural?</summary><p>Fazemos. Nosso foco é o urbano, mas também medimos sítios e fazendas, com georreferenciamento e mapas para projetos.</p></details>
+      <details class="rv"><summary>Vocês fazem imóvel rural?</summary><p>Fazemos. Atendemos imóveis urbanos e rurais: georreferenciamento de sítios e fazendas, desmembramento de glebas, ortofotos e cálculo de áreas, além de serviços para o agro, como identificação de falhas de plantio, contagem de plantas e mapas de produtividade.</p></details>
     </div>
   </div>
 </section>
@@ -456,12 +439,10 @@ footer a{color:#fff}
   <div class="bg" aria-hidden="true"></div>
   <div class="wrap">
     <h2 id="fc-t" class="rv">Vamos medir o seu imóvel?</h2>
-    <p class="rv">Mande a localização e conte o que você precisa. O orçamento é sem compromisso.</p>
     <div class="ctas rv">
       <a class="btn btn-stake" data-wa="Olá! Vim pelo site da Zenite e gostaria de um orçamento." href="#">WhatsApp (87) 99104-1531</a>
       <a class="btn btn-ghost" href="https://mail.google.com/mail/?view=cm&fs=1&to=zenitetopnz@gmail.com&su=Or%C3%A7amento%20-%20site%20Zenite" target="_blank" rel="noopener">Enviar e-mail</a>
     </div>
-    <p class="area rv">Atendemos Petrolina, Juazeiro, Lagoa Grande, Santa Maria da Boa Vista, Casa Nova, Sobradinho, Curaçá e região.</p>
   </div>
 </section>
 </main>
